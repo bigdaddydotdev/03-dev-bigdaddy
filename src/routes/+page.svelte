@@ -1,2 +1,21 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	export let form;
+</script>
+
+<form method="POST">
+	<label>
+		enter the passphrase
+		<input name="passphrase" autocomplete="off" />
+	</label>
+</form>
+
+{#if form?.incorrect}
+	<p class="error">wrong passphrase!</p>
+{/if}
+
+<style>
+	.error {
+		color: red;
+	}
+</style>
+
