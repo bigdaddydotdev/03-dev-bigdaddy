@@ -1,4 +1,7 @@
 import { redirect, fail } from '@sveltejs/kit';
+import { PASSPHRASE } from '$env/static/private';
+
+let static = env.PASSPHRASE
 
 export function load({ cookies }) {
 	if (cookies.get('allowed')) {
