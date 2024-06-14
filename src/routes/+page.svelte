@@ -1,4 +1,5 @@
 <script>
+        import { PASSPHRASE } from '$env/static/private';
 	export let form;
 </script>
 
